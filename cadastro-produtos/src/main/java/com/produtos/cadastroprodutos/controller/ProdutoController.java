@@ -21,11 +21,15 @@ public class ProdutoController {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(produtoService.salvar(produto));
     }
-
     @GetMapping
     public ResponseEntity<List<Produto>> produtoList() {
         return ResponseEntity.ok(produtoService.list());
 
+    }
+    @DeleteMapping("{id}")
+    public String deletarProd(@PathVariable Long id) {
+        produtoService.deletarProd(id);
+        return "Produto excluido com Sucesso";
     }
 
 

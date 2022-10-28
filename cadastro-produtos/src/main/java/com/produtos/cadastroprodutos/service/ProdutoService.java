@@ -7,8 +7,11 @@ import java.util.List;
 
 public interface ProdutoService {
 
-public Produto salvar(Produto produto);
+Produto salvar(Produto produto);
 
-public List<Produto> list();
+List<Produto> list();
+
+void deletarProd(Long id);
 
 }
+

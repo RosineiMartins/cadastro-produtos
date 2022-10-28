@@ -23,5 +23,10 @@ public class ProdutoServiceImpl implements ProdutoService{
         return produtoRepository.findAll();
     }
 
+    @Override
+    public void deletarProd(Long id) {
+        produtoRepository.deleteById(id);
+    }
+
 
 }
